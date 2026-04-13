@@ -1,0 +1,42 @@
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 0;
+  color: #9ca3af; /* gray */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Underline base */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover underline */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link (Apple style) */
+.nav-link.active {
+  color: #ffffff;
+}
+
+/* Active underline always visible */
+.nav-link.active::after {
+  width: 100%;
+}

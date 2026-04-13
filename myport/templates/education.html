@@ -1,0 +1,121 @@
+{% load static %}
+
+{% include "navbar.html" %}
+
+{% block education %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black relative">
+
+    <!-- 🌌 Modern Blur Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        
+        <!-- Top Left Glow -->
+        <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] 
+                    bg-purple-600 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Bottom Right Glow -->
+        <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] 
+                    bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Center Soft Glow -->
+        <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] 
+                    bg-purple-500 opacity-20 rounded-full blur-3xl 
+                    transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+<section class="py-10 bg-transparent" id="services">
+    <div class="container mx-auto px-4">
+        
+        <!-- Heading -->
+        <h2 class="text-4xl font-bold text-purple-400 mb-10 text-center">
+           My Education 
+        </h2>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Card 1 -->
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/20 transition">
+                <div class="relative group">
+                    <img src="{% static 'images\Schooll.jpeg' %}" 
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        ➜
+                    </div>
+                </div>
+
+                <div class="p-5 text-center">
+                    <h3 class="text-lg font-semibold text-white mb-2">Schooling [2009-2020]</h3>
+                    <p class="text-gray-400 text-sm">
+                     I completed my schooling from <span class="text-white font-semibold">Rao Kishan Lal High School</span>, Gurgaon.
+                     I scored 88 and 93 percentile in 10th and 12th boards examinations, respectively. 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/20 transition">
+                <div class="relative group">
+                    <img src={% static 'images\University.jpeg' %}
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        ➜
+                    </div>
+                </div>
+
+                <div class="p-5 text-center">
+                    <h3 class="text-lg font-semibold text-white mb-2">Bachelor's Degree [2020-2023]</h3>
+                    <p class="text-gray-400 text-sm">
+                       I completed my bachelor's degree from <span class="text-white font-semibold">Gurugram University</span> in Humanities. [Bachelor of Arts] 
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-purple-500/20 transition">
+                <div class="relative group">
+                    <img src={% static 'images\Ducat.jpeg' %} 
+                        class="w-full h-56 object-cover group-hover:scale-105 transition duration-300">
+
+                    <div class="absolute top-3 right-3 w-8 h-8 bg-purple-500 rounded-full opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        ➜
+                    </div>
+                </div>
+
+                <div class="p-5 text-center">
+                    <h3 class="text-lg font-semibold text-white mb-2">Full Stack Web Development Course [2025-2026]</h3>
+                    <p class="text-gray-400 text-sm">
+                        I learnt coding and web development from <span class="text-white font-semibold">Ducat Gugaon</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<p class="text-center mb-5 text-gray-400 text-sm max-w-3xl mx-auto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur id earum quos repellendus iste dignissimos laudantium animi voluptatem! Vel quibusdam nam expedita quam voluptatibus distinctio, veniam fuga! Exercitationem, nihil repudiandae!
+                    Suscipit, sequi quae! Nulla, sed tenetur. Similique facere explicabo unde error quisquam laudantium nam hic, at odio! Neque recusandae placeat, quam, quidem error rem unde adipisci eveniet libero ea aperiam? 
+                    </p>
+
+</body>
+</html>
+
+
+{% endblock education %}
+
+
+
+

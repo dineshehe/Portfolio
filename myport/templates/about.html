@@ -1,0 +1,111 @@
+{% load static %}
+
+
+{% include "navbar.html" %}
+
+{% block about %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+ <body class="bg-black relative">
+
+    <!-- 🌌 Modern Blur Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        
+        <!-- Top Left Glow -->
+        <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] 
+                    bg-purple-600 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Bottom Right Glow -->
+        <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] 
+                    bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Center Soft Glow -->
+        <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] 
+                    bg-purple-500 opacity-20 rounded-full blur-3xl 
+                    transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+<section class=" bg-transparent" id="services">
+    <div class="text-center text-3xl sm:text-4xl md:text-5xl font-bold text-purple-400 mt-10">
+        About Me
+    </div>
+
+    <div class="w-full mb-10 max-w-7xl px-4 mx-auto sm:px-6 md:px-8 mt-10">
+        
+        <blockquote class="relative grid items-center bg-[#111118] border border-purple-500/20 shadow-lg md:grid-cols-3 rounded-xl overflow-hidden">
+            
+            <!-- IMAGE -->
+            <img class="w-full h-64 sm:h-80 md:h-full object-cover opacity-90 md:rounded-l-xl"
+            style="clip-path: polygon(0 0%, 100% 0%, 75% 100%, 0% 100%);"
+            src="{% static 'images\sunset.jpeg' %}" >
+
+            <!-- CONTENT -->
+            <article class="relative p-4 sm:p-6 md:p-8 md:col-span-2">
+                
+                <!-- QUOTE ICON -->
+               <!-- QUOTE ICON -->
+<!-- QUOTE ICON -->
+<svg class="absolute top-2 right-2 w-10 h-10 md:w-16 md:h-16 text-white opacity-80 pointer-events-none"
+    viewBox="0 0 256 256" fill="currentColor">
+    <path
+        d="M65.44 153.526V149.526H61.44H20.48C11.3675 149.526 4 142.163 4 133.105V51.4211C4 42.3628 11.3675 35 20.48 35H102.4C111.513 35 118.88 42.3628 118.88 51.4211V166.187C118.88 195.935 95.103 220.165 65.44 220.979V153.526ZM198.56 153.526V149.526H194.56H153.6C144.487 149.526 137.12 142.163 137.12 133.105V51.4211C137.12 42.3628 144.487 35 153.6 35H235.52C244.633 35 252 42.3628 252 51.4211V166.187C252 195.935 228.223 220.165 198.56 220.979V153.526Z">
+    </path>
+</svg>             <path
+                        d="M65.44 153.526V149.526H61.44H20.48C11.3675 149.526 4 142.163 4 133.105V51.4211C4 42.3628 11.3675 35 20.48 35H102.4C111.513 35 118.88 42.3628 118.88 51.4211V166.187C118.88 195.935 95.103 220.165 65.44 220.979V153.526ZM198.56 153.526V149.526H194.56H153.6C144.487 149.526 137.12 142.163 137.12 133.105V51.4211C137.12 42.3628 144.487 35 153.6 35H235.52C244.633 35 252 42.3628 252 51.4211V166.187C252 195.935 228.223 220.165 198.56 220.979V153.526Z"
+                        stroke="currentColor" stroke-width="8"></path>
+                </svg>
+<div class="space-y-4 sm:space-y-6">
+                    
+    <p class="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+       I was the second topper in my 10th grade, especially strong in Science.
+Even <br> then,  I chose the Arts stream often unfairly seen by society as a choice for those who give up not because I had to, but because I had a dream: <br> to crack the UPSC. Many people questioned my decision, but I followed my own path and completed my 12th with 93%. <br>
+
+Just as I finished school, the world came to a halt during the COVID-19 pandemic. The lockdown kept me at home for two years, and during that time, life tested me in unexpected ways. My mother's health became critical due to heart failure, and those years were spent going back and forth to hospitals. Somewhere along the way, my study routine faded, but my sense of responsibility grew stronger. <br>
+
+When things slowly returned to normal, I restarted my UPSC preparation. With time, I realized that this journey demands not just hard work, but patience beyond measure. I appeared for a few one-day exams and even cleared some, but I chose not to join due to distant postings. By then, two years had passed, and I began to feel the need to become financially independent. <br>
+
+That's when life quietly introduced me to something new.
+While reading current affairs one day, I came across a website that fascinated me. A simple thought crossed my mind how are these websites even built?
+And that small question became the beginning of something big. <br>
+
+I started exploring coding through YouTube, learning little by little in my free time. Slowly, curiosity turned into interest, and interest turned into passion. When I realized how vast and promising the tech world is, I decided to make it my Plan B which, over time, started feeling like my true calling. <br>
+
+To take things seriously, I joined a professional web development course at <br> <a href="https://ducatindia.com" class = "font-semibold underline"> Ducat Gurgaon.</a> There, I began with HTML and CSS and gradually learned programming languages, databases, AI tools, chatbot integration, and modern frameworks. I never felt bored in fact, every day felt like building something new, something meaningful. <br>
+
+I also took help from AI while learning, and even while building this portfolio. It helped me move faster, but the effort and curiosity have always been mine. <br>
+
+Today, I have built multiple websites, each one giving me confidence and joy.
+Now, I no longer fear the question “What if UPSC doesn't work out?”
+Because I have found something I can do for a lifetime, without ever getting tired of it. <br>
+
+Coding is no longer just a backup plan for me it is a journey I truly enjoy.
+I have learned a lot, but I know there is still so much more ahead. And I am ready for it. <br>
+
+All I ask for is a little support from above.
+The effort will always be mine and the blessings, I leave to God. <br>
+    </p>
+
+    <span class="block font-semibold text-white text-base sm:text-lg md:text-xl">
+        Dinesh <span class="text-purple-400">Sharma</span>
+    </span>
+
+</div>
+            </article>
+        </blockquote>
+    </div>
+
+</body>
+
+
+{% endblock about %}
+
+
+

@@ -1,0 +1,128 @@
+{% include "navbar.html" %}
+
+{% block contact %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+    <!-- 🌌 Modern Blur Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        
+        <!-- Top Left Glow -->
+        <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] 
+                    bg-purple-600 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Bottom Right Glow -->
+        <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] 
+                    bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
+
+        <!-- Center Soft Glow -->
+        <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] 
+                    bg-purple-500 opacity-20 rounded-full blur-3xl 
+                    transform -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+
+
+
+<!-- Header -->
+<header class="text-center py-16">
+  <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+    Contact Me
+  </h1>
+  <p class="text-gray-400 text-xl mt-4">You can contact me via any of the following methods:</p>
+</header>
+
+<!-- Cards -->
+<section class="px-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+    <!-- Card -->
+    <div class="backdrop-blur-lg bg-white/5 border border-purple-400/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">📞 Call</h3>
+      <a href="tel:965027794" class="block mt-3 text-gray-300 hover:text-purple-400 transition">
+        +91-965027794
+      </a>
+    </div>
+
+    <!-- Card -->
+    <div class="backdrop-blur-lg bg-white/5 border border-purple-400/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">📧 Email</h3>
+      <a href="mailto:dinesharma212@gmail.com" class="block mt-3 text-gray-300 hover:text-purple-400 transition">
+        dinesharma212@gmail.com
+      </a>
+    </div>
+
+    <!-- Card -->
+    <div class="backdrop-blur-lg bg-white/5 border border-purple-400/20 rounded-2xl p-6 shadow-lg hover:scale-105 transition duration-300">
+      <h3 class="text-xl font-semibold text-purple-400">💬 WhatsApp</h3>
+      <a href="https://wa.me/9650257794?text=Hello%20Dinesh%20" target="_blank"
+        class="block mt-3 text-gray-300 hover:text-purple-400 transition">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Form -->
+ <div class="text-center pt-10">
+   <p class="text-gray-400 text-xl mt-4"> You can send me suggestions here : </p>
+   </div>
+<section class="mt-16 px-4">
+  <div id="contact-bottom" class="max-w-3xl mx-auto backdrop-blur-lg bg-white/5 border border-purple-400/20 rounded-2xl p-8 shadow-lg">
+
+    <h2 class="text-2xl font-bold text-center text-purple-400">Send Message</h2>
+
+    <form action="/saveData" method="post" class="mt-8 space-y-6">
+       {% csrf_token %}
+
+      <input type="text" name="fname" placeholder="Your Name"
+        class="w-full text-white p-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+      <input type="email" name="mail" placeholder="Your Email"
+        class="w-full text-white p-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+      <textarea rows="5" name="message" placeholder="Your Message"
+        class="w-full text-white  p-3 bg-black/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"></textarea>
+
+      <button type="submit"
+        class="w-full bg-purple-400 text-black py-3 rounded-lg font-semibold hover:bg-purple-500 transition duration-300 shadow-lg">
+        Send Message 
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+
+<script>
+  window.addEventListener("load", function () {
+    const params = new URLSearchParams(window.location.search);
+    const scrollTarget = params.get("scroll");
+
+    if (scrollTarget === "bottom") {
+      const element = document.getElementById("contact-bottom");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }, 300);
+      }
+    }
+  });
+</script>
+</body>
+</html>
+
+{% endblock contact %}
+
+
+

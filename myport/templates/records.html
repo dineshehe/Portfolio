@@ -1,0 +1,101 @@
+{% include "navbar.html" %}
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-black relative">
+
+<!-- 🌌 Background -->
+<div class="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+  <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-purple-600 opacity-30 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-purple-500 opacity-20 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+</div>
+
+<!-- ✅ SUCCESS POPUP -->
+{% if messages %}
+  {% for message in messages %}
+    <script>
+      Swal.fire({
+        icon: 'success',
+        title: '{{ message }}',
+        confirmButtonText: 'OK'
+      });
+    </script>
+  {% endfor %}
+{% endif %}
+
+<!-- TABLE -->
+<div class="flex items-center justify-center h-screen">
+  <div class="overflow-x-auto">
+    <table class="w-full bg-white shadow-md rounded-lg border border-gray-200">
+      
+      <thead>
+        <tr class="border-b">
+          <th class="px-6 py-4 text-left text-gray-600">Full Name</th>
+          <th class="px-6 py-4 text-left text-gray-600">Id</th>
+          <th class="px-6 py-4 text-left text-gray-600">Email</th>
+          <th class="px-6 py-4 text-left text-gray-600">Message</th>
+          <th class="px-6 py-4 text-left text-gray-600">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for i in records %}
+        <tr class="border-b">
+          
+          <td class="px-6 py-4">{{ i.full_name }}</td>
+          <td class="px-6 py-4">{{ i.id }}</td>
+          <td class="px-6 py-4">{{ i.email_address }}</td>
+          <td class="px-6 py-4">{{ i.message }}</td>
+
+          <td class="px-6 flex flex-wrap gap-5 py-4">
+            <form action="{% url 'deleteR' i.id %}" method="POST">
+           
+              {% csrf_token %}
+              
+              <button type="button" onclick="confirmDelete(this)"
+                class="bg-red-500 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">
+                Delete
+              </button>
+             </form>
+
+
+            <form action="{% url 'updating' i.id %}">
+
+              <button class="bg-purple-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">Update</button>
+
+
+            </form>
+
+           
+          </td>
+
+        </tr>
+        {% endfor %}
+      </tbody>
+
+    </table>
+  </div>
+</div>
+
+<!-- ✅ CONFIRM DELETE SCRIPT -->
+<script>
+function confirmDelete(btn) {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "This action cannot be undone!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      btn.closest('form').submit();
+    }
+  });
+}
+</script>
+
+</body>

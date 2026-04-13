@@ -1,0 +1,126 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinesh Sharma</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-black relative">
+
+  <!-- Navbar -->
+  {% include "navbar.html" %}
+
+  <!-- 🌌 Background -->
+  <div class="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
+        
+    <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] 
+                bg-purple-600 opacity-30 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] 
+                bg-purple-800 opacity-30 rounded-full blur-3xl"></div>
+
+    <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] 
+                bg-purple-500 opacity-20 rounded-full blur-3xl 
+                transform -translate-x-1/2 -translate-y-1/2"></div>
+  </div>
+
+  <!-- Main Section -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+
+      <div class="flex flex-col md:flex-row items-center gap-12">
+
+        <!-- Profile Image -->
+        <img
+          class="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover"
+          src="{% static 'images/Dp.jpeg' %}"
+        />
+
+        <!-- Text -->
+        <div class="max-w-xl text-center md:text-left">
+
+          <h1 class="text-white font-bold text-4xl sm:text-5xl mb-6">
+            Hi. <br>
+            I am <span class="text-purple-400">Dinesh</span> Sharma.
+          </h1>
+
+          <p class="text-gray-300 mb-8 leading-relaxed">
+             I'm Dinesh, a 23-year-old tech enthusiast with a passion for web
+        development. My tech journey started with HTML, CSS, and JavaScript,
+        and I was hooked by the thrill of crafting dynamic, interactive
+        websites. As I grew, Django and ReactJS became my go-to tools for
+        building scalable websites. Feel free
+        to <a class="underline font-semibold text-white" href="{% url 'contact' %}?scroll=bottom">Contact</a> if you have questions, collaboration ideas, or just want to
+        discuss the latest in web development!
+          </p>
+
+          <!-- Social -->
+          <div class="flex justify-center md:justify-start gap-4">
+
+         <!-- GitHub -->
+  <a href="https://github.com/dineshehe" target="_blank"
+    class="flex items-center gap-2 px-4 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-700 transition">
+    
+    <i class="fab fa-github"></i>
+    Github
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/dinesh-sharma-215939370" target="_blank"
+    class="flex items-center gap-2 px-4 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-700 transition">
+    
+    <i class="fab fa-linkedin"></i>
+    LinkedIn
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/dineshehe" target="_blank"
+    class="flex items-center gap-2 px-4 py-2 text-white bg-gray-800 rounded-md hover:bg-gray-700 transition">
+    
+    <i class="fab fa-instagram"></i>
+    Instagram
+  </a>
+
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+     <div class="flex justify-center px-4 mt-10">
+
+  <a href="https://wa.me/9650257794?text=Hi%2C%20I%20want%20a%20website.%20"
+     class="relative overflow-hidden group
+     w-full sm:w-auto text-center
+     inline-block px-6 py-4 text-lg font-semibold text-white 
+     rounded-xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 
+     shadow-lg transition-all duration-300 hover:scale-105">
+
+    <span class="relative z-10">
+      Click here to get your website built
+    </span>
+
+    <!-- ✨ Shine Effect -->
+    <span class="absolute inset-0 
+                 bg-white opacity-50 blur-lg 
+                 transform -translate-x-full 
+                 group-hover:translate-x-full 
+                 transition-all duration-700">
+    </span>
+
+  </a>
+
+</div>
+
+    </div>
+  </section>
+
+</body>
+</html>
